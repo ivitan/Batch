@@ -31,4 +31,4 @@
 ::
 ::978f952a14a936cc963da21a135fa983
 @echo off
-netdom join %computername% /domain:grgit.com /UserD:adddomain /PasswordD:grg8033
+netdom join %computername% /domain:grgit.com /UserD:adddomain /PasswordD:passw
