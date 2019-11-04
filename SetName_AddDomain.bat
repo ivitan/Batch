@@ -22,7 +22,7 @@ reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters" 
 reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters" /v Hostname /t reg_sz /d "%computername%" /f
 
 echo =====Ìí¼Ó°ì¹«ÍøÓò=====
-netdom join %computername% /domain:grgit.com /UserD:adddomain /PasswordD:grg8033
+netdom join %computername% /DOMAIN:grgit.com /UserD:adddomain /PasswordD:grg8033
  
 set/p=  ¡ö<nul
 for /L %%i in (1,1,38) do set /p a=¡ö<nul&ping /n 1 127.0.0.1>nul
