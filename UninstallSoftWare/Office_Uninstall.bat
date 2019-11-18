@@ -1,4 +1,4 @@
-@ECHO OFF&PUSHD %~DP0 &TITLE GRGInstall -- Jay
+@ECHO OFF&PUSHD %~DP0 &TITLE Office Uninstall
 mode con cols=58 lines=25
 color 2F
 Rd "%WinDir%\system32\test_permissions" >NUL 2>NUL
