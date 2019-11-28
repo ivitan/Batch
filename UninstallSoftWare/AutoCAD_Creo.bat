@@ -1,18 +1,18 @@
 @ECHO OFF&PUSHD %~DP0 &TITLE AutoCad Uninstall
 mode con cols=58 lines=25
 
-echo ÕıÔÚ°²×°7zip...
-net use \\10.1.200.3\1¹¤¾ßÈí¼ş
-COPY /y "\\10.1.200.3\1¹¤¾ßÈí¼ş\°ì¹«Èí¼ş\7-Zip_19.00_x86_x64_UnNSIS_Setup_Ha_Mod.exe" "C:\UniAccessAgentDownloadData\"
+echo æ­£åœ¨å®‰è£… 7zip ...
+net use \\10.1.200.3\1å·¥å…·è½¯ä»¶
+COPY /y "\\10.1.200.3\1å·¥å…·è½¯ä»¶\åŠå…¬è½¯ä»¶\7-Zip_19.00_x86_x64_UnNSIS_Setup_Ha_Mod.exe" "C:\UniAccessAgentDownloadData\"
 
 "C:\UniAccessAgentDownloadData\7-Zip_19.00_x86_x64_UnNSIS_Setup_Ha_Mod.exe" /S
 
-echo ÕıÔÚÉ±²¿·Ö³ÌĞò½ø³Ì...
+echo æ­£åœ¨æ€éƒ¨åˆ†ç¨‹åºè¿›ç¨‹ ...
 TASKKILL /F /IM acad.exe
 TASKKILL /F /IM xtop.exe
 TASKKILL /F /IM pro_comm_msg.exe
 
-echo ÕıÔÚ´ò°ü±¸·İ
+echo æ­£åœ¨æ‰“åŒ…å¤‡ä»½
 MD "D:\tools\backup\Lnks\"
 MD "D:\tools\backup\Autodesk\"
 MD "D:\tools\backup\PTC\"
@@ -23,9 +23,9 @@ COPY /y "C:\Users\Public\Desktop\ModelCHECK.lnk" "D:\tools\backup\Lnks\"
 XCOPY /S "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Autodesk" "D:\tools\backup\Autodesk\"
 XCOPY /S "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PTC" "D:\tools\backup\PTC\"
 
-"C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\A.7z" "D:\tools\backup\Autodesk"
-"C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\P.7z" "D:\tools\backup\PTC"
-"C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\DWF.7z" "C:\Program Files (x86)\Autodesk\Autodesk DWF Viewer"
+"C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\Au.7z" "D:\tools\backup\Autodesk"
+"C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\PT.7z" "D:\tools\backup\PTC"
+"C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\DW.7z" "C:\Program Files (x86)\Autodesk\Autodesk DWF Viewer"
 
 RMDIR /s/q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Autodesk"
 RMDIR /s/q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\PTC"
@@ -40,9 +40,16 @@ RMDIR /s/q "D:\tools\backup\Lnks"
 
 "C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\AC.7z" "D:\tools\AutoCAD 2007"
 "C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\P.7z" "D:\tools\PTC"
+"C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\JT.7z" "D:\tools\JT"
 
 RMDIR /s/q "D:\tools\PTC"
 RMDIR /s/q "D:\tools\AutoCAD 2007"
+RMDIR /s/q "D:\tools\JT"
 
-echo Íê³É£¡
+echo åˆ é™¤ ProE ç¯å¢ƒå˜é‡ ...
+set regpath=HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Environment
+set evname=JAVA_HOME
+reg delete "%regpath%" /v "%evname%"  /f
+
+echo ï¿½ï¿½É£ï¿½
 quit
