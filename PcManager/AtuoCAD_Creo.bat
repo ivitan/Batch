@@ -36,6 +36,7 @@ RMDIR /s/q "C:\Program Files (x86)\Autodesk\Autodesk DWF Viewer"
 DEL /f /s /q "C:\Users\Public\Desktop\*Auto*.lnk"
 DEL /f /s /q "C:\Users\Public\Desktop\*Cre*.lnk"
 DEL /f /s /q "C:\Users\Public\Desktop\ModelCHECK.lnk"
+RMDIR /s/q "D:\tools\backup\Lnks"
 
 "C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\AC.7z" "D:\tools\AutoCAD 2007"
 "C:\Program Files\7-Zip\7z.exe" a -pvitan.me -t7z "D:\tools\backup\P.7z" "D:\tools\PTC"
