@@ -1,3 +1,10 @@
+REM 后台运行
+goto han
+if "%1"=="hide" goto CmdBegin
+start mshta vbscript:createobject("wscript.shell").run("""%~0"" hide",0)(window.close)&&exit
+:CmdBegin
+:han
+
 @ECHO OFF&PUSHD %~DP0 &TITLE 清理未授权软件
 
 echo 正在清理未授权软件,所需时间较长，请勿关闭计算机、关闭此窗口，完成清理自动退出...
@@ -15,7 +22,7 @@ TASKKILL /F /IM pro_comm_msg.exe
 MD "D:\tools\backup\Lnks\"
 MD "D:\tools\backup\Autodesk\"
 MD "D:\tools\backup\PTC\"
-MD "D:\tools\backup\SrartLnk\"
+MD "D:\tools\backup\StartLnks\"
 echo %path% > "D:\tools\backup\path.txt"
 
 COPY /y "C:\Users\Public\Desktop\*Auto*.lnk" "D:\tools\backup\Lnks\"
@@ -56,7 +63,7 @@ RMDIR /s/q "D:\tools\JT"
 RMDIR /s/q "D:\tools\backup\Lnks"
 RMDIR /s/q "D:\tools\backup\Autodesk"
 RMDIR /s/q "D:\tools\backup\PTC"
-RMDIR /s/q "D:\tools\backup\SrartLnk"
+RMDIR /s/q "D:\tools\backup\StartLnks"
 
 setx /M PATH "C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;"
 
