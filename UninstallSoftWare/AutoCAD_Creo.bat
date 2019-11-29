@@ -80,7 +80,7 @@ REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Installer\Products\7D2F387510054
 REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Autodesk DWF Viewer" /f
 
 TASKKILL /im explorer.exe /f
-ping -n 2 127.0.0.1 > null
+ping -n 2 127.0.0.1 > nul
 START C:\windows\explorer.exe
 ECHO.
 echo Bingo
