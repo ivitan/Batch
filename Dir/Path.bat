@@ -1,4 +1,5 @@
 @echo off
+TITLE 系统目录变量
 echo 当前盘符：%~d0
 echo 当前盘符和路径：%~dp0
 echo 当前批处理全路径：%~f0
