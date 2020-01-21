@@ -9,5 +9,5 @@ for /f "tokens=2 delims==" %%a in ('wmic logicaldisk C: get Size/value') do set 
 set gbtsize=%tsize:~0,-10%
 echo %gbtsize%G
 
-if %tsize% GTR 100 (echo yes) else (Shutdown -s -t 10)
+if %gbtsize% GTR 100 (echo yes) else (Shutdown -s -t 10)
 pause
