@@ -1,0 +1,14 @@
+select volume 3
+REMOVE
+ASSIGN LETTER=U
+select volume 0
+shrink desired 373482
+create partition primary size=183481
+format quick
+create partition primary size=189500
+format quick
+select volume 4
+ASSIGN LETTER=D
+select volume 5
+ASSIGN LETTER=E
+exit
